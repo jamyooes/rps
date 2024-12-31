@@ -19,8 +19,10 @@ def rps(user):
     
     Output:
     result (int): numerical result for the user's decision
-    ai (int): numerical representation of AI's choice for displaying
+    mappings[ai] (string): string representation of AI's choice for displaying
+    mappings[user] (string): string representation of AI's choice for displaying
     """
+    mappings = ['Rock', 'Paper', 'Scissors']
     ai = random.randint(0, 2)
     # x is the player's decision and y is the AI's decision
     decision = [[0, -1, 1],
@@ -28,5 +30,6 @@ def rps(user):
                 [-1, 1, 0]]
     result = decision[user][ai]
     # print(result)
-    return result, ai
+    
+    return result, mappings[ai], mappings[user]
 
