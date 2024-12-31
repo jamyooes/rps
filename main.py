@@ -63,10 +63,12 @@ while running:
     # fill the screen with a color to wipe away anything from last frame
     screen.fill("purple")
     
+    # This will print out the buttons on the screen
     rock_button.draw(screen)
     paper_button.draw(screen)
     scissor_button.draw(screen)
     
+    # This will print out the current status for the game
     result.result_text(ai_decision, player_decision, game_result, SCREEN_WIDTH, SCREEN_HEIGHT, ai_won, player_games_won, games_played).print_result(screen)
     # flip() the display to put your work on screen
     # pygame.display.flip()
